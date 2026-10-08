@@ -1,0 +1,12 @@
+peliculas_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var(\"PGHOST\", \"localhost\") }}"
+      port: 5432
+      user: "{{ env_var(\"PGUSER\", \"admin\") }}"
+      password: "{{ env_var(\"PGPASSWORD\", \"admin123\") }}"
+      dbname: peliculas
+      schema: public
+      threads: 4

@@ -1,0 +1,5 @@
+name: peliculas_dbt
+version: "1.0.0"
+profile: peliculas_dbt
+model-paths: ["models"]
+seed-paths: ["seeds"]

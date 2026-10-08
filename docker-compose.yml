@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: postgres_peliculas
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: peliculas
+    ports:
+      - "5432:5432"
+    volumes:
+      - peliculas-data:/var/lib/postgresql/data
+volumes:
+  peliculas-data:
