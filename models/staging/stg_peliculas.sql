@@ -24,5 +24,6 @@ select
     "Sci-Fi" as g_ciencia_ficcion,
     "Thriller" as g_thriller,
     "War" as g_belica,
-    "Western" as g_western
+    "Western" as g_western,
+    ("unknown" + "Action" + "Adventure" + "Animation" + "Children's" + "Comedy" + "Crime" + "Documentary" + "Drama" + "Fantasy" + "Film-Noir" + "Horror" + "Musical" + "Mystery" + "Romance" + "Sci-Fi" + "Thriller" + "War" + "Western") as n_generos
 from {{ ref('peliculas') }}
